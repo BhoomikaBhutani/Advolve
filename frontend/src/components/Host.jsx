@@ -4,7 +4,9 @@ import { HOST_PHOTO, HOST_NAME } from "@/config/site";
 const CHIPS = ["Founder-led", "Ads → Meetings", "Straight answers"];
 
 const Host = () => (
-  <section data-testid="meet-host-section" className="relative overflow-hidden border-y border-slate-200 bg-slate-50 py-16 sm:py-24">
+  <>
+    <div aria-hidden className="h-8 bg-white sm:h-10" />
+    <section data-testid="meet-host-section" className="relative overflow-hidden border-b border-slate-200 bg-slate-50 py-16 sm:py-24">
     <span
       aria-hidden
       className="pointer-events-none absolute -top-6 left-1/2 -translate-x-1/2 select-none whitespace-nowrap font-heading text-[22vw] font-extrabold leading-none text-slate-950/[0.04] sm:text-[14rem]"
@@ -21,7 +23,6 @@ const Host = () => (
           className="relative mx-auto w-64 sm:w-72 md:w-full"
         >
           <span aria-hidden className="absolute -inset-2 rounded-2xl border border-slate-300" />
-          <span aria-hidden className="absolute -bottom-3 -right-3 h-full w-full rounded-2xl bg-slate-200/70" />
           <img
             data-testid="host-photo"
             src={HOST_PHOTO}
@@ -56,7 +57,8 @@ const Host = () => (
         </motion.div>
       </div>
     </div>
-  </section>
+    </section>
+  </>
 );
 
 export default Host;
