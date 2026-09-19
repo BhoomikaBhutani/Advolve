@@ -2,11 +2,10 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { motion } from "framer-motion";
 
 const FAQS = [
-  { q: "Is this a sales call?", a: "Partly, and I'd rather say so. The first 25 minutes are genuinely about your business. The last 20 are where I explain what we do and you decide. You'll know by minute 45 whether it's a yes or a no." },
-  { q: "Why charge ₹21 at all?", a: "Because free calls get booked and not attended. ₹21 costs nothing but it means the people on my calendar actually show up. Refundable if you cancel with 4 hours' notice." },
-  { q: "What do I need to prepare?", a: "Nothing. Just know roughly what you charge and where your current clients come from." },
-  { q: "What if I'm not ready to spend on ads yet?", a: "Then I'll tell you that on the call and we won't waste each other's time. You'll still leave with a clearer view of your funnel." },
-  { q: "Will you give me a quote on the call?", a: "Yes, if it's a fit. Real numbers for your program, not a brochure." },
+  { q: "What does the actual service cost, if I want it?", a: "₹25,000 a month for the management, plus ₹30,000 in ad spend paid directly to Meta from your own account. So budget ₹55,000 a month in total. If that's out of range, tell me now and we'll skip the call." },
+  { q: "Do I need to already be running ads?", a: "No. Most coaches we speak to have either never run ads or tried once and stopped. That's normal and it's usually easier than fixing someone else's mess." },
+  { q: "Can I really handle 80–90 meetings a month?", a: "That's 4 a day, six days a week, at 30 to 40 minutes each. It's a real load, and it's the honest constraint of this model. If you can't hold that many, we'll build for a smaller number on the call." },
+  { q: "What do I need to prepare?", a: "Nothing to read or bring. Just be somewhere quiet, with your camera on and your mic clear. It's a conversation, not a presentation." },
   { q: "What if I need to reschedule?", a: "Free, up to 4 hours before. There's a link in your confirmation email." },
 ];
 
