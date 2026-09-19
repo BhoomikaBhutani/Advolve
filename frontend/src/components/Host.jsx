@@ -36,14 +36,12 @@ const MaskedLine = ({ i, children, className = "" }) => {
 };
 
 const Mark = ({ children }) => (
-  <mark className="bg-slate-950 px-1 font-semibold text-white">{children}</mark>
+  <mark className="bg-white px-1 font-semibold text-slate-950">{children}</mark>
 );
 
 const Host = () => (
-  <>
-    <div aria-hidden className="h-8 bg-slate-50 sm:h-10" />
-    <section data-testid="meet-host-section" className="relative overflow-hidden bg-slate-50 py-16 sm:py-24">
-      <div aria-hidden className="pointer-events-none absolute -right-32 top-0 h-[30rem] w-[30rem] rounded-full bg-slate-300/40 blur-3xl" />
+  <section data-testid="meet-host-section" className="relative overflow-hidden bg-[#0A0F1E] py-16 text-white sm:py-24">
+      <div aria-hidden className="pointer-events-none absolute -right-32 top-0 h-[30rem] w-[30rem] rounded-full bg-slate-700/20 blur-3xl" />
       <div className="relative mx-auto max-w-5xl px-4 sm:px-6">
         <div className="grid items-center gap-10 md:grid-cols-2 md:gap-14">
           <motion.div
@@ -53,12 +51,12 @@ const Host = () => (
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="relative order-first md:order-last"
           >
-            <span aria-hidden className="absolute -inset-2 rounded-3xl border border-slate-300" />
+            <span aria-hidden className="absolute -inset-2 rounded-3xl border border-white/10" />
             <img
               data-testid="host-photo"
               src={HOST_PHOTO}
               alt={`${HOST_NAME}, Founder of Advolve`}
-              className="relative aspect-[4/5] w-full rounded-3xl border border-slate-200 object-cover grayscale transition-all duration-700 hover:grayscale-0 [mask-image:linear-gradient(to_bottom,black_75%,transparent)]"
+              className="relative aspect-[4/5] w-full rounded-3xl border border-white/10 object-cover grayscale transition-all duration-700 hover:grayscale-0 [mask-image:linear-gradient(to_bottom,black_75%,transparent)]"
               loading="lazy"
             />
           </motion.div>
@@ -68,28 +66,24 @@ const Host = () => (
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="flex items-center gap-2 font-mono text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-500"
+              className="flex items-center gap-2 font-mono text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-400"
             >
               <Quote className="h-3.5 w-3.5 fill-current" /> Meet your host
             </motion.p>
 
-            <h2 className="mt-3 font-heading text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl">
-              <MaskedLine i={0}>Founder<span className="metal-text">.</span></MaskedLine>
+            <h2 data-testid="host-name" className="mt-4 font-heading text-5xl font-extrabold leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
+              <MaskedLine i={0}>NISHANT</MaskedLine>
+              <MaskedLine i={1}>BHUTANI<span className="metal-text-light">.</span></MaskedLine>
             </h2>
-
-            <p data-testid="host-name" className="mt-5 font-heading text-3xl font-extrabold leading-[0.95] tracking-tight text-slate-900 sm:text-4xl">
-              <MaskedLine i={1}>NISHANT</MaskedLine>
-              <MaskedLine i={2}>BHUTANI</MaskedLine>
-            </p>
 
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.35, duration: 0.5 }}
-              className="mt-4 flex items-center gap-2 font-heading text-lg font-semibold text-slate-600 sm:text-xl"
+              className="mt-4 flex items-center gap-2 font-heading text-lg font-semibold text-slate-300 sm:text-xl"
             >
-              Founder, Advolve <Asterisk className="h-5 w-5 text-slate-400" />
+              Founder, Advolve <Asterisk className="h-5 w-5 text-slate-500" />
             </motion.p>
 
             <motion.blockquote
@@ -97,10 +91,10 @@ const Host = () => (
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5, duration: 0.6 }}
-              className="relative mt-8 border-l-2 border-slate-950 pl-5"
+              className="relative mt-8 border-l-2 border-white/20 pl-5"
             >
-              <Quote aria-hidden className="absolute -left-2 -top-3 h-5 w-5 fill-slate-300 text-slate-300" />
-              <p data-testid="host-bio" className="text-base leading-relaxed text-slate-600 sm:text-lg">
+              <Quote aria-hidden className="absolute -left-2 -top-3 h-5 w-5 fill-slate-600 text-slate-600" />
+              <p data-testid="host-bio" className="text-base leading-relaxed text-slate-300 sm:text-lg">
                 I build and run <Mark>done-for-you client acquisition systems</Mark> for high-ticket coaches in
                 India — the ads, the qualification, the calendar bookings. On this call you talk to me directly, not
                 a sales rep, and you get a <Mark>straight answer</Mark> on whether the Pre-Sold Funnel fits your program.
@@ -109,8 +103,7 @@ const Host = () => (
           </div>
         </div>
       </div>
-    </section>
-  </>
+  </section>
 );
 
 export default Host;
