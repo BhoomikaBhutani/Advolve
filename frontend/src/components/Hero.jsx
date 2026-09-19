@@ -47,7 +47,7 @@ const Hero = () => {
   const videoY = useTransform(scrollYProgress, [0, 1], [0, 60]);
 
   return (
-    <header ref={ref} data-testid="hero-section" className="relative mx-auto max-w-5xl px-4 pt-10 sm:px-6 sm:pt-16">
+    <header ref={ref} data-testid="hero-section" className="relative mx-auto max-w-5xl px-4 pt-10 text-center sm:px-6 sm:pt-16">
       <motion.p
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -68,7 +68,7 @@ const Hero = () => {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.65, duration: 0.6 }}
-        className="mt-6 flex flex-wrap items-center gap-3"
+        className="mt-6 flex flex-wrap items-center justify-center gap-3"
       >
         <span data-testid="hero-scarcity-badge" className="inline-flex items-center gap-1.5 rounded-full border border-red-200 bg-red-50 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-red-600">
           <Zap className="h-3.5 w-3.5" /> Limited to 4 meetings a day
@@ -129,7 +129,7 @@ const Hero = () => {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.05, duration: 0.6 }}
-        className="mt-8"
+        className="mt-8 flex justify-center"
       >
         <BookButton testid="hero-book-button" className="px-8 py-4 text-base" />
       </motion.div>
