@@ -1,0 +1,145 @@
+{
+  "project_info": {
+    "name": "Advolve - 45-Minute Client Pipeline Audit Landing Page",
+    "target_audience": "High-ticket Relationship Coaches in India (charging ₹10,000+)",
+    "core_offer": "45-Minute 1:1 Client Pipeline Audit with Founder Nishant Bhutani for ₹21",
+    "primary_cta_link": "https://razorpay.com/",
+    "app_type": "landing_page",
+    "design_archetype": "Swiss High-Contrast & Editorial Performance (Archetype 4 Variant)",
+    "theme": "Light Theme (Clean White background, crisp border frames, vibrant electric blue accent #2563EB)"
+  },
+  "typography": {
+    "font_family_heading": "Cabinet Grotesk / Plus Jakarta Sans",
+    "font_family_body": "DM Sans / Inter",
+    "font_family_mono": "JetBrains Mono (for agenda timestamps & countdown timer)",
+    "rules": {
+      "h1_hero": "text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-none text-slate-900",
+      "h2_section": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900",
+      "h3_subsection": "text-xl sm:text-2xl font-semibold text-slate-800",
+      "body": "text-base sm:text-lg leading-relaxed text-slate-600",
+      "labels": "text-xs font-mono uppercase tracking-widest text-blue-600 font-bold",
+      "countdown_timer": "font-mono font-bold text-lg sm:text-xl text-slate-900 tracking-tight"
+    }
+  },
+  "colors": {
+    "background": "#FFFFFF",
+    "surface": "#F8FAFC",
+    "card_bg": "#FFFFFF",
+    "primary_accent": "#2563EB",
+    "primary_hover": "#1D4ED8",
+    "text_dark": "#0F172A",
+    "text_muted": "#475569",
+    "border_subtle": "#E2E8F0",
+    "urgency_badge": "#FEF2F2",
+    "urgency_text": "#DC2626",
+    "highlight_glow": "rgba(37, 99, 235, 0.1)"
+  },
+  "visual_enhancers": {
+    "cards": "bg-white border border-slate-200 rounded-2xl shadow-sm hover:shadow-md transition-shadow p-5 sm:p-6",
+    "sticky_bar": "fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 p-3 sm:p-4 shadow-2xl",
+    "agenda_timeline": "relative border-l-2 border-blue-600/30 ml-4 pl-6 space-y-6",
+    "scarcity_badge": "inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-600 text-xs font-semibold uppercase tracking-wider"
+  },
+  "grids_and_layouts": {
+    "hero_layout": "max-w-4xl mx-auto px-4 pt-6 pb-12 flex flex-col items-center text-center space-y-6",
+    "highlights_grid": "grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 max-w-4xl mx-auto px-4",
+    "agenda_grid": "max-w-3xl mx-auto px-4 space-y-4",
+    "why_book_grid": "grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto px-4",
+    "faq_accordion": "max-w-3xl mx-auto px-4 space-y-3",
+    "mobile_padding_rule": "px-4 sm:px-6 pt-10 pb-24"
+  },
+  "key_sections": [
+    {
+      "name": "Hero Section",
+      "content": "Eyebrow 'FOR RELATIONSHIP COACHES IN INDIA CHARGING ₹10,000+', Headline 'The 45-Minute Client Pipeline Audit', Host Subline 'Host: Nishant Bhutani, Founder of Advolve', Scarcity pill '⚡ Limited to 4 meetings a day', Price tag '₹21 Only', Custom YouTube VSL Embed Container with play overlay",
+      "data_testid": "hero-section"
+    },
+    {
+      "name": "6-Fact Highlights Grid",
+      "facts": ["45 Minutes", "1:1 Strategy", "Google Meet", "Hindi / English", "4 Max / Day", "Founder Led"],
+      "data_testid": "highlights-grid"
+    },
+    {
+      "name": "Why Should You Book This Meeting?",
+      "points": [
+        "Audit your exact client acquisition leakages",
+        "Stop relying solely on organic word-of-mouth",
+        "Build a high-converting pre-sold funnel structure",
+        "Get direct, no-BS clarity from an active agency founder"
+      ],
+      "data_testid": "why-book-section"
+    },
+    {
+      "name": "Meeting Agenda (Centrepiece)",
+      "segments": [
+        {"num": "01", "time": "5m", "title": "Introduction & Goal Setting", "desc": "Alignment on your coaching niche, offer price, and desired pipeline volume."},
+        {"num": "02", "time": "10m", "title": "Your Numbers Today", "desc": "Deep dive into your current lead sources, conversion rates, and monthly revenue."},
+        {"num": "03", "time": "10m", "title": "Where It's Leaking", "desc": "Identifying precise drop-off points in your ad strategy, landing page, or consultation sales call."},
+        {"num": "04", "time": "10m", "title": "The Pre-Sold Funnel Built for You", "desc": "Unveiling the high-converting marketing framework engineered specifically for high-ticket Indian coaches."},
+        {"num": "05", "time": "7m", "title": "Your Questions", "desc": "Open floor to dissect bottlenecks, tech setup, ad spend budgets, or team execution."},
+        {"num": "06", "time": "3m", "title": "A Straight Answer", "desc": "Honest verdict on whether Advolve can partner with you or if you should fix specific elements in-house."}
+      ],
+      "data_testid": "agenda-section"
+    },
+    {
+      "name": "About This Meeting",
+      "badges": ["₹21 Filter - Kills Freebie Seekers", "100% Refundable if Unsatisfied", "NOT a Pitch Webinar"],
+      "data_testid": "about-meeting-section"
+    },
+    {
+      "name": "Meet Your Host",
+      "host_name": "Nishant Bhutani",
+      "role": "Founder, Advolve Performance Marketing",
+      "bio": "Performance marketer who has scaled high-ticket service brands and coaches across India with profitable, predictable client acquisition funnels.",
+      "data_testid": "meet-host-section"
+    },
+    {
+      "name": "FAQ Section",
+      "questions": [
+        {"q": "Why is the audit priced at ₹21?", "a": "₹21 acts as a commitment filter to ensure only serious coaches book slots, saving time for both of us."},
+        {"q": "Is this a group webinar or a 1:1 meeting?", "a": "It is strictly a 100% private 1:1 strategy session with founder Nishant Bhutani on Google Meet."},
+        {"q": "What language will the meeting be conducted in?", "a": "We can conduct the meeting comfortably in Hindi, English, or Hinglish based on your preference."},
+        {"q": "What if I need to cancel or reschedule?", "a": "You can reschedule up to 4 hours before the meeting via the link in your confirmation email."},
+        {"q": "Is the ₹21 refundable?", "a": "Yes, if you feel the 45 minutes did not provide value, simply reply to the booking email and we will refund ₹21 immediately."},
+        {"q": "Do I need to run ads before booking?", "a": "No, whether you currently run ads or depend entirely on organic social media, this audit will pinpoint your exact expansion roadmap."}
+      ],
+      "data_testid": "faq-section"
+    },
+    {
+      "name": "Sticky Bottom Booking Bar",
+      "features": "Always visible sticky footer bar with '45 mins · 1:1 · Google Meet', Midnight IST shared countdown timer, ₹21 price badge, and bold 'Book Audit for ₹21' Razorpay CTA button",
+      "data_testid": "sticky-booking-bar"
+    },
+    {
+      "name": "Legal Pages Modals / Subpages",
+      "links": ["Privacy Policy", "Terms & Conditions", "Cancellation & Rescheduling", "Contact Us"],
+      "data_testid": "legal-footer-links"
+    }
+  ],
+  "image_urls": [
+    {
+      "category": "vsl_thumbnail",
+      "url": "https://images.unsplash.com/photo-1578574577315-3fbeb0cecdc2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzV8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBidXNpbmVzcyUyMGNvbnN1bHRhbnQlMjBwcm9mZXNzaW9uYWwlMjBtZWV0aW5nJTIwY29hY2hpbmd8ZW58MHx8fHwxNzg5ODE0MTA5fDA&ixlib=rb-4.1.0&q=85",
+      "description": "VSL video player thumbnail preview showing 1:1 coaching audit"
+    },
+    {
+      "category": "host_profile",
+      "url": "https://images.unsplash.com/flagged/photo-1576485436509-a7d286952b65?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzV8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBidXNpbmVzcyUyMGNvbnN1bHRhbnQlMjBwcm9mZXNzaW9uYWwlMjBtZWV0aW5nJTIwY29hY2hpbmd8ZW58MHx8fHwxNzg5ODE0MTA5fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Founder Nishant Bhutani professional headshot / coaching moment"
+    }
+  ],
+  "instructions_to_main_agent": [
+    "Build a mobile-first, ultra-fast landing page targeting Indian relationship coaches charging ₹10,000+.",
+    "Implement the midnight IST countdown timer calculating remaining time till 23:59:59 IST daily.",
+    "Ensure all CTA buttons redirect to the Razorpay URL (pass dummy or real URL smoothly) and fire Meta Pixel click conversion event.",
+    "Add data-testid on every interactive button, input, accordion header, card, timer, and CTA link.",
+    "Ensure legal pages (Privacy, Terms, Cancellation, Contact) can be opened in smooth accessible dialog modals or tab views.",
+    "Keep mobile performance high, no unnecessary bloated external CSS, fast loading inline components."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "All interactive and key informational elements MUST include a data-testid attribute.",
+    "DO NOT use transparent background in header, sticky bars, or overlays.",
+    "Ensure high contrast WCAG standards for text over white or tinted backgrounds.",
+    "Strictly follow the light theme with crisp blue #2563EB accent colors."
+  ]
+}
