@@ -9,7 +9,7 @@ const Host = () => (
     <section data-testid="meet-host-section" className="relative overflow-hidden border-b border-slate-200 bg-slate-50 py-16 sm:py-24">
     <span
       aria-hidden
-      className="pointer-events-none absolute -top-4 left-1/2 -translate-x-1/2 select-none whitespace-nowrap font-heading text-[13vw] font-extrabold leading-none text-slate-950/[0.04] sm:text-[12rem]"
+      className="pointer-events-none absolute -bottom-2 left-1/2 -translate-x-1/2 select-none whitespace-nowrap font-heading text-[14vw] font-extrabold leading-[0.8] text-slate-950/[0.05] sm:-bottom-6 sm:text-[13rem]"
     >
       FOUNDER
     </span>
