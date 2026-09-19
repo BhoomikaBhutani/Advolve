@@ -18,11 +18,16 @@ const format = (ms) => {
   return `${h}:${m}:${s}`;
 };
 
+const read = () => {
+  const ms = msRemainingToday();
+  return { label: format(ms), pct: ms / DAY_MS };
+};
+
 export const useIstCountdown = () => {
-  const [label, setLabel] = useState(() => format(msRemainingToday()));
+  const [state, setState] = useState(read);
   useEffect(() => {
-    const id = setInterval(() => setLabel(format(msRemainingToday())), 1000);
+    const id = setInterval(() => setState(read()), 1000);
     return () => clearInterval(id);
   }, []);
-  return label;
+  return state;
 };

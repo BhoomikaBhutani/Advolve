@@ -1,4 +1,5 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { motion } from "framer-motion";
 
 const FAQS = [
   { q: "Is this a sales call?", a: "Partly, and I'd rather say so. The first 25 minutes are genuinely about your business. The last 20 are where I explain what we do and you decide. You'll know by minute 45 whether it's a yes or a no." },
@@ -11,24 +12,33 @@ const FAQS = [
 
 const Faq = () => (
   <section data-testid="faq-section" className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24">
-    <p className="mb-3 font-mono text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-500">No surprises</p>
-    <h2 className="font-heading text-2xl font-bold tracking-tight text-slate-950 sm:text-4xl">
-      Frequently asked questions
+    <p className="mb-3 text-center font-mono text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-500">No surprises</p>
+    <h2 className="text-center font-heading text-2xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+      Asked, <span className="metal-text">answered.</span>
     </h2>
-    <Accordion type="single" collapsible className="mt-10 space-y-3">
+    <Accordion type="single" collapsible defaultValue="faq-0" className="mt-10 divide-y divide-slate-200 border-y border-slate-200">
       {FAQS.map((f, i) => (
-        <AccordionItem
+        <motion.div
           key={i}
-          value={`faq-${i}`}
-          className="rounded-2xl border border-slate-200 bg-white px-5 shadow-sm"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ delay: i * 0.05, duration: 0.45 }}
         >
-          <AccordionTrigger data-testid={`faq-question-${i + 1}`} className="py-5 text-left font-heading text-base font-semibold text-slate-900 hover:no-underline sm:text-lg">
-            {f.q}
-          </AccordionTrigger>
-          <AccordionContent data-testid={`faq-answer-${i + 1}`} className="pb-5 text-sm leading-relaxed text-slate-600 sm:text-base">
-            {f.a}
-          </AccordionContent>
-        </AccordionItem>
+          <AccordionItem value={`faq-${i}`} className="border-0">
+            <AccordionTrigger data-testid={`faq-question-${i + 1}`} className="group py-6 text-left hover:no-underline">
+              <span className="flex items-baseline gap-4 sm:gap-6">
+                <span className="font-heading text-2xl font-extrabold text-slate-200 transition-colors duration-300 group-hover:text-slate-950 group-data-[state=open]:text-slate-950 sm:text-3xl">
+                  0{i + 1}
+                </span>
+                <span className="font-heading text-base font-semibold text-slate-900 sm:text-xl">{f.q}</span>
+              </span>
+            </AccordionTrigger>
+            <AccordionContent data-testid={`faq-answer-${i + 1}`} className="pb-6 pl-12 text-sm leading-relaxed text-slate-600 sm:pl-16 sm:text-base">
+              {f.a}
+            </AccordionContent>
+          </AccordionItem>
+        </motion.div>
       ))}
     </Accordion>
   </section>

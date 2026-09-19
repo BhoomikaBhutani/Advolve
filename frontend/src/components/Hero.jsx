@@ -1,8 +1,9 @@
 import { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Play, Zap } from "lucide-react";
+import { Play } from "lucide-react";
 import { YOUTUBE_VIDEO_ID, VSL_THUMBNAIL } from "@/config/site";
 import { DotLoader } from "@/components/ui/dot-loader";
+import { useIstCountdown } from "@/hooks/useIstCountdown";
 import BookButton from "@/components/BookButton";
 
 const LIVE_FRAMES = [
@@ -40,6 +41,40 @@ const MaskedLine = ({ i, children, className = "" }) => (
   </span>
 );
 
+const UrgencyTimer = () => {
+  const { label, pct } = useIstCountdown();
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.7, duration: 0.6 }}
+      data-testid="hero-urgency-timer"
+      className="mt-7 inline-block w-full max-w-sm rounded-2xl bg-slate-950 px-5 py-4 text-left text-white shadow-xl shadow-slate-950/25 ring-1 ring-white/10"
+    >
+      <div className="flex items-center justify-between gap-4">
+        <span className="flex items-center gap-2">
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500" />
+          </span>
+          <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400">
+            Today's 4 slots close in
+          </span>
+        </span>
+        <span data-testid="hero-urgency-countdown" className="font-mono text-xl font-bold tabular-nums tracking-tight sm:text-2xl">
+          {label}
+        </span>
+      </div>
+      <div className="mt-3 h-1 w-full overflow-hidden rounded-full bg-white/10">
+        <div className="h-full rounded-full bg-white/70 transition-[width] duration-1000" style={{ width: `${pct * 100}%` }} />
+      </div>
+      <p className="mt-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-500">
+        Resets midnight IST · ₹21 holds your slot
+      </p>
+    </motion.div>
+  );
+};
+
 const Hero = () => {
   const [playing, setPlaying] = useState(false);
   const ref = useRef(null);
@@ -58,25 +93,14 @@ const Hero = () => {
         Relationship coaches who charge ₹10,000+ for their program
       </motion.p>
 
-      <h1 data-testid="hero-headline" className="font-heading text-4xl font-extrabold leading-[1.02] tracking-tight text-slate-950 sm:text-6xl lg:text-7xl">
+      <h1 data-testid="hero-headline" className="font-heading text-4xl font-extrabold leading-[1.04] tracking-tight text-slate-950 sm:text-6xl lg:text-7xl">
         <MaskedLine i={0}>Get 30 New Clients</MaskedLine>
-        <MaskedLine i={1}>In The Next</MaskedLine>
-        <MaskedLine i={2} className="metal-text headline-highlight">30 Days.</MaskedLine>
+        <MaskedLine i={1}>
+          In The Next <span className="metal-text headline-highlight">30 Days.</span>
+        </MaskedLine>
       </h1>
 
-      <motion.div
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.65, duration: 0.6 }}
-        className="mt-6 flex flex-wrap items-center justify-center gap-3"
-      >
-        <span data-testid="hero-scarcity-badge" className="inline-flex items-center gap-1.5 rounded-full border border-red-200 bg-red-50 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-red-600">
-          <Zap className="h-3.5 w-3.5" /> Limited to 4 meetings a day
-        </span>
-        <span data-testid="hero-price-badge" className="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1.5 font-mono text-xs font-semibold uppercase tracking-wider text-slate-900">
-          ₹21 to hold your slot
-        </span>
-      </motion.div>
+      <UrgencyTimer />
 
       <motion.div
         initial={{ opacity: 0, y: 24 }}
@@ -117,9 +141,6 @@ const Hero = () => {
                   <Play className="ml-1 h-6 w-6 fill-current sm:h-8 sm:w-8" />
                 </span>
               </span>
-              <span className="absolute bottom-4 left-4 rounded-md bg-slate-950/70 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-white backdrop-blur">
-                Watch first
-              </span>
             </button>
           )}
         </div>
@@ -131,7 +152,7 @@ const Hero = () => {
         transition={{ delay: 1.05, duration: 0.6 }}
         className="mt-8 flex justify-center"
       >
-        <BookButton testid="hero-book-button" className="px-8 py-4 text-base" />
+        <BookButton testid="hero-book-button" className="px-9 py-4 text-base sm:text-lg" />
       </motion.div>
     </header>
   );
