@@ -82,7 +82,7 @@ const Hero = () => {
         data-testid="hero-eyebrow"
         className="mb-6 font-mono text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-500 sm:text-xs"
       >
-        Relationship coaches who charge ₹10,000+ for their program
+        For relationship coaches charging ₹10,000+ for their program
       </motion.p>
 
       <h1 data-testid="hero-headline" className="font-heading text-4xl font-extrabold leading-[1.04] tracking-tight text-slate-950 sm:text-6xl lg:text-7xl">
