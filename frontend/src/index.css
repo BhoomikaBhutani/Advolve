@@ -135,6 +135,27 @@
     will-change: transform;
 }
 
+@keyframes metal-rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.play-metal {
+    position: relative;
+    isolation: isolate;
+}
+
+.play-metal::before {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: 9999px;
+    background: conic-gradient(from 0deg, #475569, #f8fafc, #64748b, #e2e8f0, #1e293b, #cbd5e1, #475569);
+    animation: metal-rotate 3s linear infinite;
+    z-index: -1;
+}
+
 @keyframes play-ring-pulse {
     0% {
         box-shadow: 0 0 0 0 rgba(15, 23, 42, 0.35);
@@ -151,6 +172,7 @@
 @media (prefers-reduced-motion: reduce) {
     .marquee-track,
     .play-ring,
+    .play-metal::before,
     .metal-text,
     .metal-text-light {
         animation: none;

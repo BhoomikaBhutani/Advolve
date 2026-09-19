@@ -129,7 +129,7 @@ const Hero = () => {
                 <span className="font-mono text-[10px] font-semibold uppercase tracking-widest text-white/70">Live</span>
               </span>
               <span className="absolute inset-0 flex items-center justify-center">
-                <span className="play-ring flex h-16 w-16 items-center justify-center rounded-full bg-slate-950 text-white shadow-xl shadow-slate-950/40 transition-transform duration-300 group-hover:scale-110 sm:h-20 sm:w-20">
+                <span className="play-ring play-metal flex h-16 w-16 items-center justify-center rounded-full bg-slate-950 text-white shadow-xl shadow-slate-950/40 transition-transform duration-300 group-hover:scale-110 sm:h-20 sm:w-20">
                   <Play className="ml-1 h-6 w-6 fill-current sm:h-8 sm:w-8" />
                 </span>
               </span>
