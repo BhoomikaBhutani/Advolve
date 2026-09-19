@@ -52,10 +52,7 @@ const UrgencyTimer = () => {
       data-testid="hero-urgency-timer"
       className="mt-6 inline-flex items-center gap-2.5 rounded-full border border-slate-200 bg-white/80 px-4 py-2 shadow-sm backdrop-blur"
     >
-      <span className="relative flex h-2 w-2">
-        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75" />
-        <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500" />
-      </span>
+      <span className="metal-dot h-3 w-3 shrink-0" />
       <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-500">
         Today's 4 slots close in
       </span>
@@ -129,7 +126,7 @@ const Hero = () => {
                 <span className="font-mono text-[10px] font-semibold uppercase tracking-widest text-white/70">Live</span>
               </span>
               <span className="absolute inset-0 flex items-center justify-center">
-                <span className="play-ring play-metal flex h-16 w-16 items-center justify-center rounded-full bg-slate-950 text-white shadow-xl shadow-slate-950/40 transition-transform duration-300 group-hover:scale-110 sm:h-20 sm:w-20">
+                <span className="play-ring flex h-16 w-16 items-center justify-center rounded-full bg-slate-950 text-white shadow-xl shadow-slate-950/40 transition-transform duration-300 group-hover:scale-110 sm:h-20 sm:w-20">
                   <Play className="ml-1 h-6 w-6 fill-current sm:h-8 sm:w-8" />
                 </span>
               </span>
