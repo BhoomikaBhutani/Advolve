@@ -5,11 +5,11 @@ const CHIPS = ["Founder-led", "Ads → Meetings", "Straight answers"];
 
 const Host = () => (
   <>
-    <div aria-hidden className="h-8 bg-white sm:h-10" />
+    <div aria-hidden className="h-8 bg-slate-50 sm:h-10" />
     <section data-testid="meet-host-section" className="relative overflow-hidden border-b border-slate-200 bg-slate-50 py-16 sm:py-24">
     <span
       aria-hidden
-      className="pointer-events-none absolute -top-6 left-1/2 -translate-x-1/2 select-none whitespace-nowrap font-heading text-[22vw] font-extrabold leading-none text-slate-950/[0.04] sm:text-[14rem]"
+      className="pointer-events-none absolute -top-4 left-1/2 -translate-x-1/2 select-none whitespace-nowrap font-heading text-[13vw] font-extrabold leading-none text-slate-950/[0.04] sm:text-[12rem]"
     >
       FOUNDER
     </span>
