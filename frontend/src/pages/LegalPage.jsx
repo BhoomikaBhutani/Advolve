@@ -18,7 +18,7 @@ const CONTENT = {
   terms: {
     title: "Terms & Conditions",
     sections: [
-      { h: "The service", p: `The ₹21 payment reserves a 45-minute one-to-one Client Pipeline Audit with the founder of ${BRAND} over Google Meet. The call is an assessment of your client acquisition pipeline, not a guarantee of results or revenue.` },
+      { h: "The service", p: `The ₹21 payment reserves a 45-minute one-to-one Client Pipeline Audit with the founder of ${BRAND}, held as a private 1:1 strategy meeting over video call. The call is an assessment of your client acquisition pipeline, not a guarantee of results or revenue.` },
       { h: "Booking", p: `Slots are limited to four per day and are allocated in the order payments are completed. Your slot is confirmed only after successful payment and calendar scheduling.` },
       { h: "The ₹21 charge", p: `The ₹21 is a commitment filter, not a professional fee. It is refundable under the conditions described in our Cancellation & Rescheduling policy.` },
       { h: "No guarantees", p: `Any numbers discussed on the call — ad spend, meeting volume, conversion maths — are estimates based on the information you provide. Actual results depend on your program, market and execution.` },
@@ -53,7 +53,7 @@ export default function LegalPage({ slug: slugProp }) {
     <div data-testid={`legal-page-${slug}`} className="min-h-screen bg-white">
       <Seo title={`${page.title} — ${BRAND}`} siteName={BRAND} />
       <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-16">
-        <Link to="/" data-testid="legal-back-link" className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 transition-colors hover:text-blue-800">
+        <Link to="/" data-testid="legal-back-link" className="inline-flex items-center gap-2 text-sm font-medium text-slate-900 transition-colors hover:text-slate-500">
           <ArrowLeft className="h-4 w-4" /> Back to the audit page
         </Link>
         <h1 className="mt-8 font-heading text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">{page.title}</h1>

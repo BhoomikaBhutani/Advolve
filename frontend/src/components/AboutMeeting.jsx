@@ -12,7 +12,7 @@ const AboutMeeting = () => (
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      className="mb-3 font-mono text-[11px] font-semibold uppercase tracking-[0.25em] text-blue-600"
+      className="mb-3 font-mono text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-500"
     >
       Read this before you book
     </motion.p>
@@ -34,7 +34,7 @@ const AboutMeeting = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ delay: i * 0.08, duration: 0.5 }}
-          className="border-l-2 border-blue-600 pl-5 text-base leading-relaxed text-slate-600 sm:text-lg"
+          className="border-l-2 border-slate-950 pl-5 text-base leading-relaxed text-slate-600 sm:text-lg"
         >
           {p}
         </motion.p>

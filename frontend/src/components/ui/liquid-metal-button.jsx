@@ -145,8 +145,9 @@ export function LiquidMetalButton({ label = "Get Started", onClick, viewMode = "
               <span
                 style={{
                   fontSize: "14px",
-                  color: "#666666",
-                  fontWeight: 400,
+                  color: "#FFFFFF",
+                  fontWeight: 600,
+                  letterSpacing: "0.01em",
                   textShadow: "0px 1px 2px rgba(0, 0, 0, 0.5)",
                   transition: "all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)",
                   transform: "scale(1)",

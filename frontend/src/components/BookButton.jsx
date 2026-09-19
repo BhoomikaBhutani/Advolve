@@ -16,8 +16,8 @@ const BookButton = ({ label = "Book your audit — ₹21", testid = "book-cta-bu
       whileTap={{ scale: 0.97 }}
       transition={{ type: "spring", stiffness: 400, damping: 20 }}
       className={`group inline-flex items-center justify-center gap-2 rounded-full font-semibold ${
-        dark ? "bg-white text-slate-950" : "bg-blue-600 text-white"
-      } ${className}`}
+        dark ? "bg-white text-slate-950" : "bg-slate-950 text-white"
+      } btn-metal ${className}`}
     >
       <span>{label}</span>
       <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />

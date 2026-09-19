@@ -14,7 +14,7 @@ const Footer = () => (
     <div className="mx-auto max-w-4xl px-4 sm:px-6">
       <div className="rounded-3xl border border-slate-800 bg-slate-900/60 p-8 text-center sm:p-12">
         <h2 className="font-heading text-2xl font-bold tracking-tight sm:text-4xl">
-          Four slots a day. <span className="text-blue-400">Yours is one of them.</span>
+          Four slots a day. <span className="metal-text-light">Yours is one of them.</span>
         </h2>
         <p className="mx-auto mt-4 max-w-md text-sm text-slate-400 sm:text-base">
           45 minutes with the person who would actually run your campaigns — and a straight answer at the end of it.
@@ -26,7 +26,7 @@ const Footer = () => (
 
       <div className="mt-14 flex flex-col items-center gap-6 border-t border-slate-800 pt-8 sm:flex-row sm:justify-between">
         <p data-testid="footer-brand" className="font-heading text-lg font-extrabold tracking-tight">
-          {BRAND}<span className="text-blue-500">.</span>
+          {BRAND}<span className="text-white">.</span>
         </p>
         <nav data-testid="legal-footer-links" className="flex flex-wrap justify-center gap-x-6 gap-y-2">
           {LINKS.map((l) => (

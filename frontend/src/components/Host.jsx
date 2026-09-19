@@ -8,7 +8,7 @@ const Host = () => (
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="mb-3 font-mono text-[11px] font-semibold uppercase tracking-[0.25em] text-blue-600"
+        className="mb-3 font-mono text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-500"
       >
         Your host
       </motion.p>
@@ -24,7 +24,7 @@ const Host = () => (
             data-testid="host-photo"
             src={HOST_PHOTO}
             alt={`${HOST_NAME}, Founder of Advolve`}
-            className="aspect-[4/5] w-full object-cover"
+            className="aspect-[4/5] w-full object-cover grayscale transition-all duration-700 hover:grayscale-0"
             loading="lazy"
           />
         </motion.div>
@@ -36,7 +36,7 @@ const Host = () => (
         >
           <h2 className="font-heading text-2xl font-bold tracking-tight text-slate-950 sm:text-4xl">Meet your host</h2>
           <p data-testid="host-name" className="mt-4 font-heading text-xl font-bold text-slate-900">{HOST_NAME}</p>
-          <p className="mt-1 font-mono text-xs font-semibold uppercase tracking-widest text-blue-600">Founder, Advolve</p>
+          <p className="mt-1 font-mono text-xs font-semibold uppercase tracking-widest text-slate-500">Founder, Advolve</p>
           <p data-testid="host-bio" className="mt-5 text-base leading-relaxed text-slate-600">
             Performance marketer and founder of Advolve. I build and run done-for-you client acquisition systems for
             high-ticket coaches in India — the ads, the qualification, and the calendar bookings. On this call you talk

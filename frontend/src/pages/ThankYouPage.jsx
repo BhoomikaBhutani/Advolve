@@ -13,11 +13,11 @@ export default function ThankYouPage() {
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         className="w-full max-w-md rounded-3xl border border-slate-800 bg-slate-900/60 p-8 text-center sm:p-10"
       >
-        <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-blue-600/15 text-blue-400">
+        <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-white/10 text-white">
           <CalendarCheck className="h-7 w-7" />
         </span>
         <h1 className="mt-6 font-heading text-2xl font-extrabold tracking-tight sm:text-3xl">
-          Payment received. <span className="text-blue-400">One last step.</span>
+          Payment received. <span className="metal-text-light">One last step.</span>
         </h1>
         <p className="mt-4 text-sm leading-relaxed text-slate-400 sm:text-base">
           Your ₹21 has held your slot. Now pick the exact time that suits you on the calendar — it takes under a minute.
@@ -29,13 +29,13 @@ export default function ThankYouPage() {
           rel="noopener noreferrer"
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
-          className="group mt-8 inline-flex items-center gap-2 rounded-full bg-blue-600 px-8 py-4 font-semibold text-white"
+          className="group btn-metal mt-8 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 font-semibold text-slate-950"
         >
           Pick my time slot
           <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
         </motion.a>
         <p className="mt-6 text-xs text-slate-500">
-          Your Google Meet link and a free reschedule link arrive in your confirmation email.
+          Your meeting link and a free reschedule link arrive in your confirmation email.
         </p>
       </motion.div>
     </div>

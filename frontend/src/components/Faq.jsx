@@ -11,7 +11,7 @@ const FAQS = [
 
 const Faq = () => (
   <section data-testid="faq-section" className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24">
-    <p className="mb-3 font-mono text-[11px] font-semibold uppercase tracking-[0.25em] text-blue-600">No surprises</p>
+    <p className="mb-3 font-mono text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-500">No surprises</p>
     <h2 className="font-heading text-2xl font-bold tracking-tight text-slate-950 sm:text-4xl">
       Frequently asked questions
     </h2>

@@ -8,7 +8,7 @@ const Marquee = () => {
         {[...row, ...row].map((item, i) => (
           <span key={i} className="flex items-center gap-8 font-heading text-lg font-semibold uppercase tracking-wide text-slate-400 sm:text-xl">
             {item}
-            <span className="h-1.5 w-1.5 rounded-full bg-blue-600" />
+            <span className="h-1.5 w-1.5 rounded-full bg-slate-950" />
           </span>
         ))}
       </div>

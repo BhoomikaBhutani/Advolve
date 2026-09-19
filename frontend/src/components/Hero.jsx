@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Play, Zap } from "lucide-react";
-import { YOUTUBE_VIDEO_ID, VSL_THUMBNAIL, HOST_NAME, BRAND } from "@/config/site";
+import { YOUTUBE_VIDEO_ID, VSL_THUMBNAIL } from "@/config/site";
 import { DotLoader } from "@/components/ui/dot-loader";
 import BookButton from "@/components/BookButton";
 
@@ -53,42 +53,28 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         data-testid="hero-eyebrow"
-        className="mb-6 font-mono text-[11px] font-semibold uppercase tracking-[0.25em] text-blue-600 sm:text-xs"
+        className="mb-6 font-mono text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-500 sm:text-xs"
       >
-        For relationship coaches in India charging ₹10,000+
+        Get 30 new clients in the next 30 days
       </motion.p>
 
       <h1 data-testid="hero-headline" className="font-heading text-4xl font-extrabold leading-[1.02] tracking-tight text-slate-950 sm:text-6xl lg:text-7xl">
         <MaskedLine i={0}>The 45-Minute</MaskedLine>
         <MaskedLine i={1}>Client Pipeline</MaskedLine>
-        <MaskedLine i={2} className="text-blue-600">Audit.</MaskedLine>
+        <MaskedLine i={2} className="metal-text">Audit.</MaskedLine>
       </h1>
-
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.6, duration: 0.6 }}
-        data-testid="hero-host-line"
-        className="mt-6 text-sm text-slate-500 sm:text-base"
-      >
-        {HOST_NAME} · {BRAND} · For relationship coaches charging ₹10,000+
-      </motion.p>
 
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.75, duration: 0.6 }}
-        className="mt-5 flex flex-wrap items-center gap-3"
+        transition={{ delay: 0.7, duration: 0.6 }}
+        className="mt-6 flex flex-wrap items-center gap-3"
       >
         <span data-testid="hero-scarcity-badge" className="inline-flex items-center gap-1.5 rounded-full border border-red-200 bg-red-50 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-red-600">
           <Zap className="h-3.5 w-3.5" /> Limited to 4 meetings a day
         </span>
         <span data-testid="hero-price-badge" className="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1.5 font-mono text-xs font-semibold uppercase tracking-wider text-slate-900">
           ₹21 to hold your slot
-        </span>
-        <span data-testid="hero-live-indicator" className="inline-flex items-center gap-2 rounded-full bg-slate-950 px-3 py-2" title="Slots filling live">
-          <DotLoader frames={LIVE_FRAMES} duration={120} dotClassName="bg-white/15 [&.active]:bg-blue-400 size-1" />
-          <span className="font-mono text-[10px] font-semibold uppercase tracking-widest text-white/70">Live</span>
         </span>
       </motion.div>
 
@@ -99,7 +85,7 @@ const Hero = () => {
         style={{ y: videoY }}
         className="mt-10"
       >
-        <div data-testid="vsl-player" className="relative aspect-video w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-950 shadow-2xl shadow-blue-600/10">
+        <div data-testid="vsl-player" className="relative aspect-video w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-950 shadow-2xl shadow-slate-950/20">
           {playing ? (
             <iframe
               data-testid="vsl-iframe"
@@ -122,8 +108,12 @@ const Hero = () => {
                 className="h-full w-full object-cover opacity-80 transition-opacity duration-500 group-hover:opacity-95"
                 loading="eager"
               />
+              <span data-testid="hero-live-indicator" className="absolute right-4 top-4 flex items-center gap-2 rounded-md bg-slate-950/70 px-2.5 py-1.5 backdrop-blur">
+                <DotLoader frames={LIVE_FRAMES} duration={120} dotClassName="bg-white/15 [&.active]:bg-white size-1" />
+                <span className="font-mono text-[10px] font-semibold uppercase tracking-widest text-white/70">Live</span>
+              </span>
               <span className="absolute inset-0 flex items-center justify-center">
-                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-600 text-white shadow-xl shadow-blue-600/40 transition-transform duration-300 group-hover:scale-110 sm:h-20 sm:w-20">
+                <span className="play-ring flex h-16 w-16 items-center justify-center rounded-full bg-slate-950 text-white shadow-xl shadow-slate-950/40 transition-transform duration-300 group-hover:scale-110 sm:h-20 sm:w-20">
                   <Play className="ml-1 h-6 w-6 fill-current sm:h-8 sm:w-8" />
                 </span>
               </span>

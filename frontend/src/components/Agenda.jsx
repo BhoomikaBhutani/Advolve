@@ -24,7 +24,7 @@ const Agenda = () => (
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="mb-3 font-mono text-[11px] font-semibold uppercase tracking-[0.25em] text-blue-400"
+        className="mb-3 font-mono text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-400"
       >
         The centrepiece — nobody else shows you this
       </motion.p>
@@ -36,7 +36,7 @@ const Agenda = () => (
         className="font-heading text-2xl font-bold tracking-tight sm:text-4xl"
       >
         45 minutes. 6 segments.
-        <span className="text-blue-400"> Every minute published.</span>
+        <span className="metal-text-light"> Every minute published.</span>
       </motion.h2>
       <motion.p
         initial={{ opacity: 0 }}
@@ -48,7 +48,7 @@ const Agenda = () => (
         Most "strategy calls" are a pitch in disguise. This is the full clock, published in advance — so you can judge for yourself.
       </motion.p>
 
-      <div className="relative mt-12 ml-3 space-y-8 border-l-2 border-blue-500/30 pl-7 sm:ml-4 sm:pl-10">
+      <div className="relative mt-12 ml-3 space-y-8 border-l-2 border-white/15 pl-7 sm:ml-4 sm:pl-10">
         {SEGMENTS.map((s, i) => (
           <motion.article
             key={s.num}
@@ -57,13 +57,13 @@ const Agenda = () => (
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.55, ease: "easeOut" }}
-            className="relative"
+            className="group relative"
           >
-            <span className="absolute -left-[38px] top-1 h-4 w-4 rounded-full border-2 border-blue-400 bg-slate-950 sm:-left-[50px]" />
+            <span className="absolute -left-[38px] top-1 h-4 w-4 rounded-full border-2 border-white/60 bg-slate-950 transition-colors duration-300 group-hover:border-white sm:-left-[50px]" />
             <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
-              <span className="font-heading text-4xl font-extrabold text-blue-500/25 sm:text-5xl">{s.num}</span>
+              <span className="font-heading text-4xl font-extrabold text-white/10 transition-colors duration-500 group-hover:text-white/25 sm:text-5xl">{s.num}</span>
               <h3 className="font-heading text-lg font-bold sm:text-2xl">{s.title}</h3>
-              <span className="font-mono text-xs font-semibold text-blue-400" data-testid={`agenda-time-${s.num}`}>
+              <span className="font-mono text-xs font-semibold text-slate-300" data-testid={`agenda-time-${s.num}`}>
                 {clockAt(i)} · {s.mins} mins
               </span>
             </div>
