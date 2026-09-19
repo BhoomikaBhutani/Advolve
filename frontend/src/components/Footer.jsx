@@ -25,9 +25,7 @@ const Footer = () => (
       </div>
 
       <div className="mt-14 flex flex-col items-center gap-6 border-t border-slate-800 pt-8 sm:flex-row sm:justify-between">
-        <p data-testid="footer-brand" className="font-heading text-lg font-extrabold tracking-tight">
-          {BRAND}<span className="text-white">.</span>
-        </p>
+        <img data-testid="footer-brand" src="/logo-icon.png" alt="Advolve logo mark" className="h-10 w-auto invert" />
         <nav data-testid="legal-footer-links" className="flex flex-wrap justify-center gap-x-6 gap-y-2">
           {LINKS.map((l) => (
             <Link key={l.to} to={l.to} data-testid={l.testid} className="text-xs text-slate-400 transition-colors hover:text-white sm:text-sm">
