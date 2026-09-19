@@ -2,7 +2,7 @@
 // Replace the placeholder values below with your real assets before going live.
 
 // Razorpay payment page URL for the ₹21 slot (every booking button points here)
-export const RAZORPAY_URL = "https://rzp.io/l/REPLACE_WITH_YOUR_RAZORPAY_LINK";
+export const RAZORPAY_URL = "https://rzp.io/rzp/advolve-strategy-meeting";
 
 // Calendly URL visitors are sent to AFTER payment (from the thank-you page)
 export const CALENDLY_URL = "https://calendly.com/REPLACE_WITH_YOUR_CALENDLY";

@@ -7,7 +7,7 @@ const StickyBar = () => {
   const { label } = useIstCountdown();
   const handleBook = () => {
     trackEvent("InitiateCheckout", { value: 21, currency: "INR" });
-    window.open(RAZORPAY_URL, "_blank", "noopener,noreferrer");
+    window.location.href = RAZORPAY_URL;
   };
   return (
     <div data-testid="sticky-booking-bar" className="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-slate-950 shadow-[0_-10px_40px_rgba(15,23,42,0.45)]">
