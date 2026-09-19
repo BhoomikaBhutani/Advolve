@@ -50,20 +50,18 @@ const UrgencyTimer = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.7, duration: 0.6 }}
       data-testid="hero-urgency-timer"
-      className="mt-7 inline-block w-full max-w-sm rounded-2xl bg-slate-950 px-5 py-5 text-center text-white shadow-xl shadow-slate-950/25 ring-1 ring-white/10"
+      className="mt-6 inline-flex items-center gap-2.5 rounded-full border border-slate-200 bg-white/80 px-4 py-2 shadow-sm backdrop-blur"
     >
-      <span className="flex items-center justify-center gap-2">
-        <span className="relative flex h-2 w-2">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75" />
-          <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500" />
-        </span>
-        <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.25em] text-slate-400">
-          Today's 4 slots close in
-        </span>
+      <span className="relative flex h-2 w-2">
+        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75" />
+        <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500" />
       </span>
-      <p data-testid="hero-urgency-countdown" className="mt-2 font-mono text-3xl font-bold tabular-nums leading-none tracking-tight sm:text-4xl">
+      <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-500">
+        Today's 4 slots close in
+      </span>
+      <span data-testid="hero-urgency-countdown" className="font-mono text-sm font-bold tabular-nums text-slate-950">
         {label}
-      </p>
+      </span>
     </motion.div>
   );
 };
