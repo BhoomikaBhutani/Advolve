@@ -67,6 +67,32 @@
     animation: metal-shine 5s linear infinite;
 }
 
+.headline-highlight {
+    position: relative;
+    display: inline-block;
+}
+
+.headline-highlight::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.04em;
+    height: 0.1em;
+    background: #0f172a;
+    transform-origin: left;
+    animation: underline-grow 0.9s 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes underline-grow {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
 .metal-text-light {
     background: linear-gradient(110deg, #94a3b8 25%, #ffffff 45%, #e2e8f0 55%, #94a3b8 75%);
     background-size: 200% 100%;

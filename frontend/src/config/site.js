@@ -21,7 +21,7 @@ export const VSL_THUMBNAIL = "/vsl-thumbnail.svg";
 export const HOST_PHOTO =
   "https://images.unsplash.com/flagged/photo-1576485436509-a7d286952b65?crop=entropy&cs=srgb&fm=jpg&q=80&w=800";
 
-export const CONTACT_EMAIL = "hello@advolve.in"; // replace with your real inbox
+export const CONTACT_EMAIL = "contact@advolve.co.in";
 export const BRAND = "Advolve";
 export const HOST_NAME = "Nishant Bhutani";
 export const PRICE = "₹21";

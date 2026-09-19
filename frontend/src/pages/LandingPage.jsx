@@ -3,9 +3,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
 import Highlights from "@/components/Highlights";
-import WhyBook from "@/components/WhyBook";
 import Agenda from "@/components/Agenda";
-import AboutMeeting from "@/components/AboutMeeting";
 import Host from "@/components/Host";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
@@ -32,9 +30,7 @@ export default function LandingPage() {
         <Hero />
         <Marquee />
         <Highlights />
-        <WhyBook />
         <Agenda />
-        <AboutMeeting />
         <Host />
         <Faq />
       </main>

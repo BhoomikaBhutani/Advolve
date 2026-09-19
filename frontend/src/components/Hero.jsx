@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Play, Zap } from "lucide-react";
-import { YOUTUBE_VIDEO_ID, VSL_THUMBNAIL } from "@/config/site";
+import { YOUTUBE_VIDEO_ID, VSL_THUMBNAIL, HOST_NAME, BRAND } from "@/config/site";
 import { DotLoader } from "@/components/ui/dot-loader";
 import BookButton from "@/components/BookButton";
 
@@ -55,20 +55,30 @@ const Hero = () => {
         data-testid="hero-eyebrow"
         className="mb-6 font-mono text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-500 sm:text-xs"
       >
-        Get 30 new clients in the next 30 days
+        Relationship coaches who charge ₹10,000+ for their program
       </motion.p>
 
       <h1 data-testid="hero-headline" className="font-heading text-4xl font-extrabold leading-[1.02] tracking-tight text-slate-950 sm:text-6xl lg:text-7xl">
-        <MaskedLine i={0}>The 45-Minute</MaskedLine>
-        <MaskedLine i={1}>Client Pipeline</MaskedLine>
-        <MaskedLine i={2} className="metal-text">Audit.</MaskedLine>
+        <MaskedLine i={0}>Get 30 New Clients</MaskedLine>
+        <MaskedLine i={1}>In The Next</MaskedLine>
+        <MaskedLine i={2} className="metal-text headline-highlight">30 Days.</MaskedLine>
       </h1>
+
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.65, duration: 0.6 }}
+        data-testid="hero-subline"
+        className="mt-5 font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400 sm:text-xs"
+      >
+        The 45-Minute Client Pipeline Audit · {HOST_NAME} · {BRAND}
+      </motion.p>
 
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.7, duration: 0.6 }}
-        className="mt-6 flex flex-wrap items-center gap-3"
+        transition={{ delay: 0.75, duration: 0.6 }}
+        className="mt-5 flex flex-wrap items-center gap-3"
       >
         <span data-testid="hero-scarcity-badge" className="inline-flex items-center gap-1.5 rounded-full border border-red-200 bg-red-50 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-red-600">
           <Zap className="h-3.5 w-3.5" /> Limited to 4 meetings a day
@@ -118,7 +128,7 @@ const Hero = () => {
                 </span>
               </span>
               <span className="absolute bottom-4 left-4 rounded-md bg-slate-950/70 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-white backdrop-blur">
-                Watch first — 3 min
+                Watch first
               </span>
             </button>
           )}

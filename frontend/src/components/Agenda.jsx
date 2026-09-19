@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 import BookButton from "@/components/BookButton";
 
 const SEGMENTS = [
-  { num: "01", mins: 5, title: "Introduction", desc: "Who you are, what you coach, what you charge, and what you want the next 90 days to look like." },
-  { num: "02", mins: 10, title: "Your Numbers Today", desc: "Where your clients come from right now. What you're already spending. How many enquiries turn into paying clients. I ask, you answer." },
-  { num: "03", mins: 10, title: "Where It's Leaking", desc: "I show you the specific points where interested people are dropping off. Most coaches have two or three, and they're rarely the ones they expect." },
-  { num: "04", mins: 10, title: "The Pre-Sold Funnel, Built for You", desc: "How the system would work for your program specifically — the ad spend, the meeting volume, the conversion maths at your price point." },
-  { num: "05", mins: 7, title: "Your Questions", desc: "Anything you want to ask. Pricing, timelines, what we need from you, what happens if it doesn't work." },
-  { num: "06", mins: 3, title: "A Straight Answer", desc: "I tell you whether I think this will work for you. If it won't, I'll say so and tell you what I'd do instead." },
+  { num: "01", mins: 5, title: "Introduction", desc: "You, your program, your price — and your next 90 days." },
+  { num: "02", mins: 10, title: "Your Numbers Today", desc: "Where clients come from now, and how many enquiries actually convert." },
+  { num: "03", mins: 10, title: "Where It's Leaking", desc: "The exact points where interested people drop off." },
+  { num: "04", mins: 10, title: "The Pre-Sold Funnel, Built for You", desc: "Ad spend, meeting volume and conversion maths at your price point." },
+  { num: "05", mins: 7, title: "Your Questions", desc: "Pricing, timelines, what we need, what if it doesn't work." },
+  { num: "06", mins: 3, title: "A Straight Answer", desc: "Yes or no — and if it's a no, what to do instead." },
 ];
 
 const clockAt = (index) => {
@@ -26,7 +26,7 @@ const Agenda = () => (
         viewport={{ once: true }}
         className="mb-3 font-mono text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-400"
       >
-        The centrepiece — nobody else shows you this
+        Nobody else shows you this
       </motion.p>
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
@@ -38,15 +38,6 @@ const Agenda = () => (
         45 minutes. 6 segments.
         <span className="metal-text-light"> Every minute published.</span>
       </motion.h2>
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.15 }}
-        className="mt-4 max-w-xl text-sm leading-relaxed text-slate-400 sm:text-base"
-      >
-        Most "strategy calls" are a pitch in disguise. This is the full clock, published in advance — so you can judge for yourself.
-      </motion.p>
 
       <div className="relative mt-12 ml-3 space-y-8 border-l-2 border-white/15 pl-7 sm:ml-4 sm:pl-10">
         {SEGMENTS.map((s, i) => (
