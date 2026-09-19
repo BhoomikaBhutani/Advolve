@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { RAZORPAY_URL } from "@/config/site";
 import { trackEvent } from "@/lib/pixel";
 
-const BookButton = ({ label = "Book your audit — ₹21", testid = "book-cta-button", className = "", dark = false }) => {
+const BookButton = ({ label = "Book your slot — ₹21", testid = "book-cta-button", className = "", dark = false }) => {
   const handleClick = () => {
     trackEvent("InitiateCheckout", { value: 21, currency: "INR" });
     window.open(RAZORPAY_URL, "_blank", "noopener,noreferrer");

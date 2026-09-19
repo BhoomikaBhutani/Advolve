@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Play, Zap } from "lucide-react";
-import { YOUTUBE_VIDEO_ID, VSL_THUMBNAIL, HOST_NAME, BRAND } from "@/config/site";
+import { YOUTUBE_VIDEO_ID, VSL_THUMBNAIL } from "@/config/site";
 import { DotLoader } from "@/components/ui/dot-loader";
 import BookButton from "@/components/BookButton";
 
@@ -64,21 +64,11 @@ const Hero = () => {
         <MaskedLine i={2} className="metal-text headline-highlight">30 Days.</MaskedLine>
       </h1>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.65, duration: 0.6 }}
-        data-testid="hero-subline"
-        className="mt-5 font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400 sm:text-xs"
-      >
-        The 45-Minute Client Pipeline Audit · {HOST_NAME} · {BRAND}
-      </motion.p>
-
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.75, duration: 0.6 }}
-        className="mt-5 flex flex-wrap items-center gap-3"
+        transition={{ delay: 0.65, duration: 0.6 }}
+        className="mt-6 flex flex-wrap items-center gap-3"
       >
         <span data-testid="hero-scarcity-badge" className="inline-flex items-center gap-1.5 rounded-full border border-red-200 bg-red-50 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-red-600">
           <Zap className="h-3.5 w-3.5" /> Limited to 4 meetings a day

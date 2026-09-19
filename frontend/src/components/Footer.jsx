@@ -20,7 +20,7 @@ const Footer = () => (
           45 minutes with the person who would actually run your campaigns — and a straight answer at the end of it.
         </p>
         <div className="mt-8 flex justify-center">
-          <BookButton testid="footer-book-button" dark label="Book your audit — ₹21" className="px-8 py-4 text-base" />
+          <BookButton testid="footer-book-button" dark label="Book your slot — ₹21" className="px-8 py-4 text-base" />
         </div>
       </div>
 

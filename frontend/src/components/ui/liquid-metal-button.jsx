@@ -15,7 +15,7 @@ export function LiquidMetalButton({ label = "Get Started", onClick, viewMode = "
     if (viewMode === "icon") {
       return { width: 46, height: 46, innerWidth: 42, innerHeight: 42, shaderWidth: 46, shaderHeight: 46 };
     }
-    return { width: 142, height: 46, innerWidth: 138, innerHeight: 42, shaderWidth: 142, shaderHeight: 46 };
+    return { width: 190, height: 46, innerWidth: 186, innerHeight: 42, shaderWidth: 190, shaderHeight: 46 };
   }, [viewMode]);
 
   useEffect(() => {
