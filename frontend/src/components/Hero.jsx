@@ -52,7 +52,7 @@ const UrgencyTimer = () => {
       data-testid="hero-urgency-timer"
       className="mt-6 inline-flex items-center gap-2.5 rounded-full border border-slate-200 bg-white/80 px-4 py-2 shadow-sm backdrop-blur"
     >
-      <span className="metal-dot h-3 w-3 shrink-0" />
+      <span className="metal-dot h-4 w-4 shrink-0" />
       <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-500">
         Today's 4 slots close in
       </span>
