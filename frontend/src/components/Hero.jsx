@@ -43,34 +43,26 @@ const MaskedLine = ({ i, children, className = "" }) => (
 );
 
 const UrgencyTimer = () => {
-  const { label, pct } = useIstCountdown();
+  const { label } = useIstCountdown();
   return (
     <motion.div
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.7, duration: 0.6 }}
       data-testid="hero-urgency-timer"
-      className="mt-7 inline-block w-full max-w-sm rounded-2xl bg-slate-950 px-5 py-4 text-left text-white shadow-xl shadow-slate-950/25 ring-1 ring-white/10"
+      className="mt-7 inline-block w-full max-w-sm rounded-2xl bg-slate-950 px-5 py-5 text-center text-white shadow-xl shadow-slate-950/25 ring-1 ring-white/10"
     >
-      <div className="flex items-center justify-between gap-4">
-        <span className="flex items-center gap-2">
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500" />
-          </span>
-          <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400">
-            Today's 4 slots close in
-          </span>
+      <span className="flex items-center justify-center gap-2">
+        <span className="relative flex h-2 w-2">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75" />
+          <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500" />
         </span>
-        <span data-testid="hero-urgency-countdown" className="font-mono text-xl font-bold tabular-nums tracking-tight sm:text-2xl">
-          {label}
+        <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.25em] text-slate-400">
+          Today's 4 slots close in
         </span>
-      </div>
-      <div className="mt-3 h-1 w-full overflow-hidden rounded-full bg-white/10">
-        <div className="h-full rounded-full bg-white/70 transition-[width] duration-1000" style={{ width: `${pct * 100}%` }} />
-      </div>
-      <p className="mt-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-500">
-        Resets midnight IST · ₹21 holds your slot
+      </span>
+      <p data-testid="hero-urgency-countdown" className="mt-2 font-mono text-3xl font-bold tabular-nums leading-none tracking-tight sm:text-4xl">
+        {label}
       </p>
     </motion.div>
   );

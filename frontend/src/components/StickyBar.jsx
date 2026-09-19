@@ -20,7 +20,6 @@ const StickyBar = () => {
             </span>
             Slots close in {label}
           </p>
-          <p className="mt-0.5 font-mono text-[10px] uppercase tracking-widest text-slate-500">midnight IST · ₹21</p>
         </div>
         <span data-testid="sticky-bar-book-button" className="shrink-0">
           <LiquidMetalButton label="Book your slot · ₹21" onClick={handleBook} />
