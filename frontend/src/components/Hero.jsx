@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Play } from "lucide-react";
 import { YOUTUBE_VIDEO_ID, VSL_THUMBNAIL } from "@/config/site";
 import { DotLoader } from "@/components/ui/dot-loader";
+import DottedSurface from "@/components/ui/dotted-surface";
 import { useIstCountdown } from "@/hooks/useIstCountdown";
 import BookButton from "@/components/BookButton";
 
@@ -82,7 +83,8 @@ const Hero = () => {
   const videoY = useTransform(scrollYProgress, [0, 1], [0, 60]);
 
   return (
-    <header ref={ref} data-testid="hero-section" className="relative mx-auto max-w-5xl px-4 pt-10 text-center sm:px-6 sm:pt-16">
+    <header ref={ref} data-testid="hero-section" className="relative mx-auto max-w-5xl overflow-hidden px-4 pt-10 text-center sm:px-6 sm:pt-16">
+      <DottedSurface size={7} opacity={0.45} />
       <motion.p
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
