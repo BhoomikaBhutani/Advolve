@@ -2,7 +2,7 @@ import { liquidMetalFragmentShader, ShaderMount } from "@paper-design/shaders";
 import { Sparkles } from "lucide-react";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 
-export function LiquidMetalButton({ label = "Get Started", onClick, viewMode = "text" }) {
+export function LiquidMetalButton({ label = "Get Started", onClick, viewMode = "text", width }) {
   const [isHovered, setIsHovered] = useState(false);
   const [isPressed, setIsPressed] = useState(false);
   const [ripples, setRipples] = useState([]);
@@ -15,8 +15,9 @@ export function LiquidMetalButton({ label = "Get Started", onClick, viewMode = "
     if (viewMode === "icon") {
       return { width: 46, height: 46, innerWidth: 42, innerHeight: 42, shaderWidth: 46, shaderHeight: 46 };
     }
-    return { width: 190, height: 46, innerWidth: 186, innerHeight: 42, shaderWidth: 190, shaderHeight: 46 };
-  }, [viewMode]);
+    const w = width || 190;
+    return { width: w, height: 46, innerWidth: w - 4, innerHeight: 42, shaderWidth: w, shaderHeight: 46 };
+  }, [viewMode, width]);
 
   useEffect(() => {
     const styleId = "shader-canvas-style-exploded";

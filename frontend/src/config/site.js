@@ -5,7 +5,7 @@
 export const RAZORPAY_URL = "https://rzp.io/rzp/advolve-strategy-meeting";
 
 // Calendly URL visitors are sent to AFTER payment (from the thank-you page)
-export const CALENDLY_URL = "https://calendly.com/REPLACE_WITH_YOUR_CALENDLY";
+export const CALENDLY_URL = "https://calendly.com/contact-advolve/1-1-strategy-meeting";
 
 // Meta Pixel ID (base code lives in public/index.html, fires PageView on load)
 export const META_PIXEL_ID = "1037947142447711";
