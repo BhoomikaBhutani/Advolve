@@ -15,8 +15,8 @@ const STEPS = [
 
 export default function BookedPage() {
   useEffect(() => {
-    if (!sessionStorage.getItem("advolve_schedule_fired")) {
-      sessionStorage.setItem("advolve_schedule_fired", "1");
+    if (!sessionStorage.getItem("adv_schedule_fired")) {
+      sessionStorage.setItem("adv_schedule_fired", "1");
       trackEvent("Schedule");
     }
   }, []);

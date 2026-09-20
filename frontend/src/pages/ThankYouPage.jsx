@@ -10,8 +10,8 @@ import { CALENDLY_URL, CONTACT_EMAIL } from "@/config/site";
 
 export default function ThankYouPage() {
   useEffect(() => {
-    if (!sessionStorage.getItem("advolve_purchase_fired")) {
-      sessionStorage.setItem("advolve_purchase_fired", "1");
+    if (!sessionStorage.getItem("adv_purchase_fired")) {
+      sessionStorage.setItem("adv_purchase_fired", "1");
       trackEvent("Purchase", { value: 21, currency: "INR" });
     }
   }, []);

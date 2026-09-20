@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import Seo from "@/components/Seo";
+import Footer from "@/components/Footer";
 import { BRAND, CONTACT_EMAIL } from "@/config/site";
 
 const CONTENT = {
@@ -67,6 +68,7 @@ export default function LegalPage({ slug: slugProp }) {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
