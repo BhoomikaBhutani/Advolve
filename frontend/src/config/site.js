@@ -11,11 +11,10 @@ export const CALENDLY_URL = "https://calendly.com/REPLACE_WITH_YOUR_CALENDLY";
 export const META_PIXEL_ID = ""; // e.g. "1234567890123456"
 
 // YouTube video ID of the VSL (the part after watch?v=)
-export const YOUTUBE_VIDEO_ID = "dQw4w9WgXcQ"; // placeholder — replace
+export const YOUTUBE_VIDEO_ID = "Pze-BTq2xxU";
 
-// Optional custom VSL thumbnail (root-relative, e.g. "/vsl-thumbnail.jpg").
-// Branded placeholder below — replace with your real custom thumbnail.
-export const VSL_THUMBNAIL = "/vsl-thumbnail.svg";
+// Custom VSL thumbnail (root-relative, served from /public)
+export const VSL_THUMBNAIL = "/vsl-thumbnail.jpg";
 
 // Host photo (replace with your own, e.g. "/nishant.jpg" placed in /public)
 export const HOST_PHOTO =
