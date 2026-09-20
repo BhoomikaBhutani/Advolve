@@ -4,7 +4,7 @@ import { Check, Mail, FolderSearch, BellRing } from "lucide-react";
 import Seo from "@/components/Seo";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { trackEvent } from "@/lib/pixel";
+import { trackEventAsync } from "@/lib/pixel";
 import { CONTACT_EMAIL } from "@/config/site";
 
 const STEPS = [
@@ -17,7 +17,7 @@ export default function BookedPage() {
   useEffect(() => {
     if (!sessionStorage.getItem("adv_schedule_fired")) {
       sessionStorage.setItem("adv_schedule_fired", "1");
-      trackEvent("Schedule");
+      trackEventAsync("Schedule");
     }
   }, []);
 

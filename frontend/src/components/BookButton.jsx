@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { RAZORPAY_URL } from "@/config/site";
-import { trackEvent } from "@/lib/pixel";
+import { trackEventAsync } from "@/lib/pixel";
 
 const BookButton = ({ label = "Book your slot — ₹21", testid = "book-cta-button", className = "", dark = false }) => {
   const handleClick = () => {
-    trackEvent("InitiateCheckout", { value: 21, currency: "INR" });
+    trackEventAsync("InitiateCheckout", { value: 21, currency: "INR" });
     window.location.href = RAZORPAY_URL;
   };
   return (

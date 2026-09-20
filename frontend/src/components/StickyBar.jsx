@@ -1,12 +1,12 @@
 import { useIstCountdown } from "@/hooks/useIstCountdown";
 import { LiquidMetalButton } from "@/components/ui/liquid-metal-button";
 import { RAZORPAY_URL } from "@/config/site";
-import { trackEvent } from "@/lib/pixel";
+import { trackEventAsync } from "@/lib/pixel";
 
 const StickyBar = () => {
   const { label } = useIstCountdown();
   const handleBook = () => {
-    trackEvent("InitiateCheckout", { value: 21, currency: "INR" });
+    trackEventAsync("InitiateCheckout", { value: 21, currency: "INR" });
     window.location.href = RAZORPAY_URL;
   };
   return (

@@ -5,14 +5,14 @@ import Seo from "@/components/Seo";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { LiquidMetalButton } from "@/components/ui/liquid-metal-button";
-import { trackEvent } from "@/lib/pixel";
+import { trackEventAsync } from "@/lib/pixel";
 import { CALENDLY_URL, CONTACT_EMAIL } from "@/config/site";
 
 export default function ThankYouPage() {
   useEffect(() => {
     if (!sessionStorage.getItem("adv_purchase_fired")) {
       sessionStorage.setItem("adv_purchase_fired", "1");
-      trackEvent("Purchase", { value: 21, currency: "INR" });
+      trackEventAsync("Purchase", { value: 21, currency: "INR" });
     }
   }, []);
 
