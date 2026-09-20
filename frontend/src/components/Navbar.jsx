@@ -1,20 +1,22 @@
 import BookButton from "@/components/BookButton";
 
-const Navbar = ({ ctaLabel = "Book · ₹21", ctaHref }) => (
-  <nav data-testid="site-navbar" className="sticky top-0 z-40 border-b border-slate-200 bg-white">
+const Navbar = ({ ctaLabel = "Book · ₹21", ctaHref, hideCta = false, dark = false }) => (
+  <nav data-testid="site-navbar" className={`sticky top-0 z-40 ${dark ? "border-b border-white/10 bg-slate-950" : "border-b border-slate-200 bg-white"}`}>
     <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3.5 sm:px-6">
       <a href="/" data-testid="nav-home-link" className="group flex items-center">
         <img
           data-testid="nav-logo"
           src="/logo-full.png"
           alt="Advolve"
-          className="h-6 w-auto transition-transform duration-300 group-hover:scale-[1.03] sm:h-7"
+          className={`h-6 w-auto transition-transform duration-300 group-hover:scale-[1.03] sm:h-7 ${dark ? "invert" : ""}`}
         />
       </a>
-      <span data-testid="nav-tagline" className="hidden font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400 md:block">
+      <span data-testid="nav-tagline" className={`hidden font-mono text-[10px] font-semibold uppercase tracking-[0.2em] md:block ${dark ? "text-slate-500" : "text-slate-400"}`}>
         Performance marketing · India
       </span>
-      {ctaHref ? (
+      {hideCta ? (
+        <span className="w-[88px]" aria-hidden />
+      ) : ctaHref ? (
         <a
           data-testid="nav-book-button"
           href={ctaHref}

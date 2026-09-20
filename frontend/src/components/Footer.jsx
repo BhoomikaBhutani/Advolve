@@ -9,10 +9,11 @@ const LINKS = [
   { to: "/contact", label: "Contact", testid: "footer-contact-link" },
 ];
 
-const Footer = () => (
+const Footer = ({ hideCta = false }) => (
   <footer data-testid="site-footer" className="bg-slate-950 pb-32 pt-16 text-white sm:pb-36">
     <div className="mx-auto max-w-4xl px-4 sm:px-6">
-      <div className="rounded-3xl border border-slate-800 bg-slate-900/60 p-8 text-center sm:p-12">
+      {!hideCta && (
+        <div className="rounded-3xl border border-slate-800 bg-slate-900/60 p-8 text-center sm:p-12">
         <h2 className="font-heading text-2xl font-bold tracking-tight sm:text-4xl">
           Four slots a day. <span className="metal-text-light">Yours is one of them.</span>
         </h2>
@@ -22,7 +23,8 @@ const Footer = () => (
         <div className="mt-8 flex justify-center">
           <BookButton testid="footer-book-button" dark label="Book your slot — ₹21" className="px-8 py-4 text-base" />
         </div>
-      </div>
+        </div>
+      )}
 
       <div className="mt-14 flex flex-col items-center gap-6 border-t border-slate-800 pt-8 sm:flex-row sm:justify-between">
         <img data-testid="footer-brand" src="/logo-icon.png" alt="Advolve logo mark" className="h-10 w-auto invert" />

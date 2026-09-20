@@ -4,6 +4,7 @@ import Lenis from "lenis";
 import LandingPage from "@/pages/LandingPage";
 import LegalPage from "@/pages/LegalPage";
 import ThankYouPage from "@/pages/ThankYouPage";
+import BookedPage from "@/pages/BookedPage";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -39,6 +40,7 @@ function App() {
         <Route path="/cancellation" element={<LegalPage slug="cancellation" />} />
         <Route path="/contact" element={<LegalPage slug="contact" />} />
         <Route path="/thank-you" element={<ThankYouPage />} />
+        <Route path="/booked" element={<BookedPage />} />
       </Routes>
     </BrowserRouter>
   );
