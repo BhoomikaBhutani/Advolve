@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Lenis from "lenis";
-import { initPixel } from "@/lib/pixel";
 import LandingPage from "@/pages/LandingPage";
 import LegalPage from "@/pages/LegalPage";
 import ThankYouPage from "@/pages/ThankYouPage";
@@ -16,7 +15,6 @@ const ScrollToTop = () => {
 
 function App() {
   useEffect(() => {
-    initPixel();
     const lenis = new Lenis({ duration: 1.1, smoothWheel: true });
     let raf;
     const loop = (time) => {

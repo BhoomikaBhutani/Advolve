@@ -97,6 +97,7 @@ export default function Seo({
   type = "website",
   siteName,
   jsonLd,
+  robots,
 }) {
   const pathname = usePathname();
 
@@ -109,6 +110,7 @@ export default function Seo({
 
     upsertLink("canonical", url);
     upsertMeta("name", "description", description);
+    upsertMeta("name", "robots", robots);
 
     upsertMeta("property", "og:type", type);
     upsertMeta("property", "og:url", url);
@@ -123,7 +125,7 @@ export default function Seo({
     upsertMeta("name", "twitter:image", imageUrl);
 
     upsertJsonLd(jsonLd);
-  }, [pathname, title, description, image, type, siteName, jsonLd]);
+  }, [pathname, title, description, image, type, siteName, jsonLd, robots]);
 
   return null;
 }
